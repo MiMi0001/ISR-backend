@@ -6,5 +6,3 @@ markdown
 django-filter
 djangorestframework-simplejwt
 django-cors-headers
-gunicorn
-whitenoise
