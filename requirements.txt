@@ -1,0 +1,10 @@
+Django
+psycopg2
+django-seed
+djangorestframework
+markdown
+django-filter
+djangorestframework-simplejwt
+django-cors-headers
+gunicorn
+whitenoise

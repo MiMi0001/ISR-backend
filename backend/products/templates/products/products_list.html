@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Termékek</title>
+</head>
+<body>
+    <div>
+        <label for="orders"> Szállítólevelek  </label>
+        <select id="orders" name="orders">
+            <option value="basic-orders"> Alaprendelések </option>
+            <option value="new"> Új szállítólevél </option>
+            <option value="auto-create"> Automata szállítólevelek </option>
+        </select>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th> ID </th>
+                <th> Kód </th>
+                <th> Termék neve </th>
+                <th> ÁFA </th>
+            </tr>
+
+            {% for product in products %}
+            <tr>
+                <td> {{product.id}} </td>
+                <td>
+                    {% if product.alt_id %}
+                        {{product.alt_id }}
+                    {% else %}
+                        ---
+                    {% endif %}
+                </td>
+                <td> {{product.name}}</td>
+                <td> {{product.tax_category.percent}} </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+</body>
+</html>
